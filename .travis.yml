@@ -12,9 +12,10 @@ android:
     - extra-google-m2repository
     - sys-img-armeabi-v7a-android-21
   licenses:
-      - 'android-sdk-preview-license-.+'
-      - 'android-sdk-license-.+'
-      - 'google-gdk-license-.+'
+    - android-sdk-license-c81a61d9
+    - android-sdk-preview-license-.+
+    - android-sdk-license-.+
+    - google-gdk-license-.+
 
 jdk:
   - oraclejdk8
