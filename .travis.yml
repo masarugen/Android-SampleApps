@@ -4,18 +4,16 @@ language: android
 
 android:
   components:
+    - tools
     - android-24
     - build-tools-24.0.3
+    - platform-tools-24
     - extra-google-google_play_services
     - extra-android-support
     - extra-android-m2repository
     - extra-google-m2repository
-    - sys-img-armeabi-v7a-android-21
-#  licenses:
-#    - android-sdk-license-c81a61d9
-#    - android-sdk-preview-license-.+
-#    - android-sdk-license-.+
-#    - google-gdk-license-.+
+  licenses:
+      - '.+'
   install:
     - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
     - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-24.0.3
