@@ -12,14 +12,14 @@ android:
     - extra-android-support
     - extra-android-m2repository
     - extra-google-m2repository
-  licenses:
-      - '.+'
-  install:
-    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
-    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-24.0.3
-    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=android-24
-    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-android-m2repository
-    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-google-m2repository
+#  licenses:
+#      - '.+'
+#  install:
+#    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
+#    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-24.0.3
+#    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=android-24
+#    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-android-m2repository
+#    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-google-m2repository
 
 jdk:
   - oraclejdk8
@@ -27,10 +27,10 @@ jdk:
 env:
   global:
     # install timeout in minutes (2 minutes by default)
-    - ADB_INSTALL_TIMEOUT=10
-    - JAVA7_HOME=/usr/lib/jvm/java-7-oracle
-    - JAVA8_HOME=/usr/lib/jvm/java-8-oracle
-    - JAVA_HOME=$JAVA7_HOME
+#    - ADB_INSTALL_TIMEOUT=10
+#    - JAVA7_HOME=/usr/lib/jvm/java-7-oracle
+#    - JAVA8_HOME=/usr/lib/jvm/java-8-oracle
+#    - JAVA_HOME=$JAVA7_HOME
 
 # before_script:
 #  - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
@@ -39,4 +39,4 @@ env:
 #  - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew clean assembleDebug --stacktrace
+  - ./gradlew clean assembleDebug
