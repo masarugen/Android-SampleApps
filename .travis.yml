@@ -11,11 +11,17 @@ android:
     - extra-android-m2repository
     - extra-google-m2repository
     - sys-img-armeabi-v7a-android-21
-  licenses:
-    - android-sdk-license-c81a61d9
-    - android-sdk-preview-license-.+
-    - android-sdk-license-.+
-    - google-gdk-license-.+
+#  licenses:
+#    - android-sdk-license-c81a61d9
+#    - android-sdk-preview-license-.+
+#    - android-sdk-license-.+
+#    - google-gdk-license-.+
+  install:
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-24.0.3
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=android-24
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-android-m2repository
+    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=extra-google-m2repository
 
 jdk:
   - oraclejdk8
