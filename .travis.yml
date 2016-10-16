@@ -39,4 +39,5 @@ env:
 #  - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew :samplejar:test :samplejar:jar
+  - ./gradlew :samplejar:test
+  - ./gradlew :samplegradleplugin:jar
