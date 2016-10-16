@@ -27,7 +27,7 @@ jdk:
 env:
   global:
     # install timeout in minutes (2 minutes by default)
-#    - ADB_INSTALL_TIMEOUT=10
+    - ADB_INSTALL_TIMEOUT=10
 #    - JAVA7_HOME=/usr/lib/jvm/java-7-oracle
 #    - JAVA8_HOME=/usr/lib/jvm/java-8-oracle
 #    - JAVA_HOME=$JAVA7_HOME
