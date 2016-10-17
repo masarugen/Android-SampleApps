@@ -34,7 +34,8 @@ createPR() {
   ## ファイルを変更する ##
   echo "hoge" > hoge.txt
   hub add .
-  if hub commit -m "add hoge" ; then
+  hub commit -m "add hoge"
+  if [ $? == 0 ]; then
     # Pull Requestを送る
     hub push origin $BRANCH_NAME
     hub pull-request -m "auto update pull request"
