@@ -4,12 +4,11 @@ language: android
 
 android:
   components:
-    - platform-tools
+    - platform-tools-25.2.2
     - tools
     - build-tools-24.0.3
     - android-24
     - extra
-#    - platform-tools-24
 #    - extra-google-google_play_services
 #    - extra-android-support
 #    - extra-android-m2repository
