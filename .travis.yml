@@ -4,8 +4,8 @@ language: android
 
 android:
   components:
-    - platform-tools-25.2.2
-    - tools
+    - platform-tools-24
+    - tools-25.2.2
     - build-tools-24.0.3
     - android-24
     - extra
