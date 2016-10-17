@@ -46,7 +46,7 @@ createPR() {
   cd ..
 }
 
-if [ `echo $TRAVIS_BRANCH | grep branch_name` ] ; then
+if [[ $TRAVIS_BRANCH = branch_name* ]] ; then
   # travis ciから生成されたprの場合は、再度prを作成しない
   echo $TRAVIS_BRANCH
 else
