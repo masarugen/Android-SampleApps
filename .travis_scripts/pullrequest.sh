@@ -35,7 +35,7 @@ createPR() {
   echo "hoge" > hoge.txt
   hub add .
   hub commit -m "add hoge"
-  if [ $? == 0 ]; then
+  if [ $? = 0 ] ; then
     # Pull Requestを送る
     hub push origin $BRANCH_NAME
     hub pull-request -m "auto update pull request"
@@ -46,7 +46,7 @@ createPR() {
   cd ..
 }
 
-if [ `echo $TRAVIS_BRANCH | grep branch_name` ]; then
+if [ `echo $TRAVIS_BRANCH | grep branch_name` ] ; then
   # travis ciから生成されたprの場合は、再度prを作成しない
   echo $TRAVIS_BRANCH
 else
