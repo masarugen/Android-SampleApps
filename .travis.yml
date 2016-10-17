@@ -4,14 +4,14 @@ language: android
 
 android:
   components:
-    - tools
+#    - tools
     - android-24
     - build-tools-24.0.3
-    - platform-tools-24
-    - extra-google-google_play_services
-    - extra-android-support
-    - extra-android-m2repository
-    - extra-google-m2repository
+#    - platform-tools-24
+#    - extra-google-google_play_services
+#    - extra-android-support
+#    - extra-android-m2repository
+#    - extra-google-m2repository
 #  licenses:
 #      - '.+'
 #  install:
@@ -42,6 +42,8 @@ script:
   - ./gradlew :samplejar:test
   - ./gradlew :samplegradleplugin:jar
 
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
   directories:
     - $HOME/.gradle/caches/
