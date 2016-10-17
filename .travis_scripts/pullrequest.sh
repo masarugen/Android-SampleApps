@@ -49,5 +49,5 @@ if [ `echo $TRAVIS_BRANCH | grep brach_name` ]; then
   # travis ciから生成されたprの場合は、再度prを作成しない
   echo $TRAVIS_BRANCH
 else
-  createPR()
+  createPR
 fi
