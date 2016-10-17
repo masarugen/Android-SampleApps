@@ -4,7 +4,7 @@ language: android
 
 android:
   components:
-    - tools
+#    - tools
     - android-24
     - build-tools-24.0.3
 #    - platform-tools-24
@@ -12,8 +12,8 @@ android:
 #    - extra-android-support
 #    - extra-android-m2repository
 #    - extra-google-m2repository
-#  licenses:
-#      - '.+'
+  licenses:
+      - '.+'
 #  install:
 #    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
 #    - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-24.0.3
