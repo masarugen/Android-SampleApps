@@ -24,7 +24,7 @@ tar -C "$HOME" -zxf "hub-linux-amd64-$HUB.tar.gz"
 export PATH="$PATH:$HOME/hub-linux-amd64-$HUB"
 
 # リポジトリに変更をコミットする
-hub clone "Android-SampleApps" _
+hub clone "nasneg/Android-SampleApps" _
 cd _
 BRANCH_NAME="branch_name_"`date "+%Y-%m-%d_%H-%M-%S"`
 hub checkout -b $BRANCH_NAME
