@@ -14,7 +14,6 @@ set -x
 # Gitを設定する
 git config --global user.name  "${GH_USER}"
 git config --global user.email "${GH_USER}@users.noreply.github.com"
-git config --global core.autocrlf "input"
 git config --global hub.protocol "https"
 git config --global credential.helper "store --file=$HOME/.config/git-credential"
 
@@ -24,16 +23,19 @@ tar -C "$HOME" -zxf "hub-linux-amd64-$HUB.tar.gz"
 export PATH="$PATH:$HOME/hub-linux-amd64-$HUB"
 
 # リポジトリに変更をコミットする
-hub clone "nasneg/Android-SampleApps" _
+hub clone "Android-SampleApps" _
 cd _
 BRANCH_NAME="branch_name_"`date "+%Y-%m-%d_%H-%M-%S"`
 hub checkout -b $BRANCH_NAME
 ## ファイルを変更する ##
 echo "hoge" > hoge.txt
 hub add .
-hub commit -m "add hoge"
+if hub commit -m "add hoge" ; then
+  # Pull Requestを送る
+  hub push origin $BRANCH_NAME
+  hub pull-request -m "auto update pull request"
+else
+  echo "There no updates"
+fi
 
-# Pull Requestを送る
-hub push origin $BRANCH_NAME
-hub pull-request -m "auto update pull request"
 cd ..
