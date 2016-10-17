@@ -42,6 +42,7 @@ env:
 script:
   - ./gradlew :samplejar:test
   - ./gradlew :samplegradleplugin:jar
+  - ./.travis_scripts/pullrequest.sh
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
