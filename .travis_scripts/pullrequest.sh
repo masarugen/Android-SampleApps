@@ -29,7 +29,7 @@ createPR() {
   # リポジトリに変更をコミットする
   hub clone "Android-SampleApps" _
   cd _
-  BRANCH_NAME="branch_name_"`date "+%Y-%m-%d_%H-%M-%S"`
+  BRANCH_NAME="branch_name_"`date "+%Y-%m-%d_%H-%M-%S"`_$TRAVIS_BRANCH
   hub checkout -b $BRANCH_NAME
   ## ファイルを変更する ##
   echo "hoge" > hoge.txt
