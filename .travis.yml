@@ -29,6 +29,7 @@ env:
   global:
     # install timeout in minutes (2 minutes by default)
     - ADB_INSTALL_TIMEOUT=10
+    - TZ=Asia/Tokyo
 #    - JAVA7_HOME=/usr/lib/jvm/java-7-oracle
 #    - JAVA8_HOME=/usr/lib/jvm/java-8-oracle
 #    - JAVA_HOME=$JAVA7_HOME
@@ -43,6 +44,7 @@ script:
   - ./gradlew :samplejar:test
   - ./gradlew :samplegradleplugin:jar
   - ./.travis_scripts/pullrequest.sh
+  - date
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
